@@ -1,0 +1,29 @@
+{
+  "name": "audio-only-media-server",
+  "version": "1.0.0",
+  "description": "Audio only media server powered by mediasoup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/griimick/audio-only-media-server.git"
+  },
+  "keywords": [
+    "media-server",
+    "mediasoup",
+    "audio",
+    "gstreamer"
+  ],
+  "author": "Soumik Pradhan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/griimick/audio-only-media-server/issues"
+  },
+  "homepage": "https://github.com/griimick/audio-only-media-server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mediasoup": "^3.5.9"
+  }
+}
