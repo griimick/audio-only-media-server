@@ -11,6 +11,20 @@ class Room {
 		this.cleanupJob = setInterval(this.cleanup, this.cleanupInterval);
 	}
 
+	markPeer(peerId) {
+		this.peers[peerId].lastSeenTs = Date.now();
+	}
+
+	hasPeer(peerId) {
+		if (this.peers[peerId])
+			return true;
+		else return false;
+	}
+
+	getPeerList() {
+		return { peers: this.peers };
+	}
+
 	cleanup() {
 		let now = Date.now();
 		Object.entries(this.peers).forEach(([id, p]) => {

@@ -5,6 +5,7 @@ const fs          = require('fs');
 const mediaServer = require('./media-server');
 
 const app = express();
+
 app.use(express.static(__dirname));
 
 async function main() {
@@ -12,6 +13,8 @@ async function main() {
 	mediaServer.start();
 
 	console.log('starting express');
+
+	/* Start HTTPS server but fallback to HTTP if certificate not configured */
 	try {
 		const tls = {
 			cert: fs.readFileSync(config.sslCrt),
